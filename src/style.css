@@ -44,10 +44,10 @@
 .row {
   justify-content: space-between;
 }
-h2 {
+.h2 {
   text-align: center;
   color: grey;
-  font-size: 32px;
+  font-size: 36px;
 }
 .five-day-forecast {
   position: relative;
