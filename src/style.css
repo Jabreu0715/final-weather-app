@@ -1,6 +1,12 @@
 .title {
   text-align: center;
   color: grey;
+  margin: 20px;
+}
+.wrapper {
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
 }
 .current-city {
   font-size: 32px;
@@ -18,22 +24,27 @@
 }
 .current-date {
   font-size: 18px;
-  color: grey;
+  color: rgb(250, 139, 3);
 }
 .sunny-emoji {
-  font-size: 40px;
+  font-size: 64px;
   color: yellow;
 }
 
-.current-temp {
-  font-size: 30px;
+.temp {
+  font-size: 64px;
   color: grey;
 }
 .degrees {
   font-size: 18px;
+  font: weight 100;
   color: grey;
   position: relative;
-  top: -10px;
+  top: -30px;
+}
+.current-weather {
+  font-size: 18px;
+  color: rgb(0, 242, 255);
 }
 .current-conditions {
   color: grey;
@@ -41,18 +52,21 @@
   position: relative;
   top: 40px;
 }
-.row {
-  justify-content: space-between;
+li {
+  list-style: none;
 }
-.h2 {
+.row {
+  justify-content: space-around;
+}
+.forecast-title {
   text-align: center;
   color: grey;
   font-size: 36px;
 }
 .five-day-forecast {
+  text-align: center;
   position: relative;
   top: 30px;
-  display: block;
 }
 .card-title {
   text-align: center;
@@ -63,11 +77,10 @@
 }
 .col-sm-2 {
   font-weight: 700;
-  display: block;
   margin: 0 auto;
   height: 300px;
   font-size: 18px;
-  border: solid #a2a8d3;
+  border: solid rgb(250, 139, 3);
   border-width: 2px;
 }
 .col-sm-2:hover {
