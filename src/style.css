@@ -45,9 +45,9 @@
   justify-content: space-between;
 }
 h2 {
-  margin: 0 auto;
+  text-align: center;
   color: grey;
-  font-size: 36px;
+  font-size: 32px;
 }
 .five-day-forecast {
   position: relative;
