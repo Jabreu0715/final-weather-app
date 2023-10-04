@@ -16,12 +16,104 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/b0632a11ea.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Final Weather App</title>
   </head>
-  <div class="container">
-    <h1>Hello</h1>
-    <body>
-      <script src="src/index.js"></script>
-    </body>
-  </div>
+  <body>
+    <div class="container">
+      <h1 class="title">Weather App</h1>
+      <div class="surround border p-5 m-1 rounded shadow">
+        <div class="row">
+          <div class="col">
+            <span class="current-city">New York City</span>
+            <div class="current-time">11:24 am</div>
+            <div class="current-day">
+              Wednesday, <span class="current-date">October 4th, 2023</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-sun fa-beat sunny-emoji"></i>
+              <span class="current-temp">22 </span
+              ><span class="degrees">℃ | ℉</span>
+            </div>
+            <span class="current-weather">CLEAR SKIES</span>
+          </div>
+          <div class="col current-conditions">
+            <ul>
+              <li><span class="precipitation">Precipitation: %</span></li>
+              <li><span class="humidity">Humidity: %</span></li>
+              <li><span class="wind">Wind: km/h</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row five-day-forecast">
+<div class="card col-sm-2 m-1 p-1">10/05
+            <div class="card-body">
+              <p class="card-title">Saturday</p>
+              <hr/>
+              <p class="card-text">
+                <i class="fa-solid fa-cloud-rain fa-beat-fade rain-cloud"></i>
+                <div class="high-temp">63°F</div>
+                <hr/>
+                <span class="low-temp">55°F</span>
+              </p>
+            </div>
+          </div>         
+          
+          <div class="card col-sm-2 m-1 p-1">10/06
+            <div class="card-body">
+              <p class="card-title">Sunday</p>
+              <hr/>
+              <p class="card-text">
+                <i class="fa-solid fa-cloud cloudy"></i>
+              
+                <div class="high-temp">65°F</div>
+                <hr/>
+                <span class="low-temp">53°F</span>
+              </p>
+            </div>
+          </div>
+              <div class="card col-sm-2 m-1 p-1">10/07
+            <div class="card-body">
+              <p class="card-title">Monday</p>
+              <hr/>
+              <p class="card-text">
+                <i class="fa-solid fa-cloud-rain fa-beat-fade rain-cloud"></i>
+                <div class="high-temp">64°F</div>
+                <hr/>
+                <span class="low-temp">48°F</span>
+              </p>
+            </div>
+          </div>
+            <div class="card col-sm-2 m-1 p-1">10/08
+            <div class="card-body">
+              <p class="card-title">Tuesday</p>
+              <hr/>
+              <p class="card-text">
+                <i class="fa-solid fa-cloud-sun mostly-cloudy"></i>
+                <div class="high-temp">59°F</div>
+                <hr/>
+                <span class="low-temp">45°F</span>
+              </p>
+            </div>
+          </div>
+                 <div class="card col-sm-2 m-1 p-1">10/09
+            <div class="card-body">
+              <p class="card-title">Wednesday</p>
+              <hr/>
+              <p class="card-text">
+                <i class="fa-solid fa-cloud-sun mostly-cloudy"></i>
+                <div class="high-temp">61°F</div>
+                <hr/>
+                <span class="low-temp">47°F</span>             
+                </p>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>

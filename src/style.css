@@ -1,0 +1,72 @@
+.title {
+  text-align: center;
+  color: grey;
+}
+.current-city {
+  font-size: 32px;
+  color: grey;
+}
+
+.current-time {
+  font-size: 18px;
+  color: grey;
+}
+
+.current-day {
+  font-size: 18px;
+  color: grey;
+}
+.current-date {
+  font-size: 18px;
+  color: grey;
+}
+.sunny-emoji {
+  font-size: 40px;
+  color: yellow;
+}
+
+.current-temp {
+  font-size: 30px;
+  color: grey;
+}
+.degrees {
+  font-size: 18px;
+  color: grey;
+  position: relative;
+  top: -10px;
+}
+.current-conditions {
+  color: grey;
+  font-size: 16px;
+  position: relative;
+  top: 40px;
+}
+.row {
+  justify-content: space-between;
+}
+.five-day-forecast {
+  position: relative;
+  top: 30px;
+  display: block;
+}
+.card-title {
+  text-align: center;
+  color: #56575d;
+}
+.card-body:hover {
+  background-color: rgb(206, 239, 253, 0.5);
+}
+.col-sm-2 {
+  font-weight: 700;
+  display: block;
+  margin: 0 auto;
+  height: 300px;
+  font-size: 18px;
+  border: solid #a2a8d3;
+  border-width: 2px;
+}
+.col-sm-2:hover {
+  transition: all 120ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.07);
+}
