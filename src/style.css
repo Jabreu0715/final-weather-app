@@ -44,6 +44,11 @@
 .row {
   justify-content: space-between;
 }
+h2 {
+  margin: 0 auto;
+  color: grey;
+  font-size: 36px;
+}
 .five-day-forecast {
   position: relative;
   top: 30px;
