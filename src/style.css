@@ -43,7 +43,7 @@ body {
 
 .temp {
   font-size: 64px;
-  color: y;
+  color: black;
 }
 .degrees {
   font-size: 18px;
@@ -54,7 +54,8 @@ body {
 }
 .current-weather {
   font-size: 18px;
-  color: rgb(0, 242, 255);
+  color: grey;
+  text-transform: capitalize;
 }
 .current-conditions {
   color: grey;
@@ -62,6 +63,7 @@ body {
   position: relative;
   top: 40px;
 }
+
 li {
   list-style: none;
 }

@@ -32,7 +32,7 @@
       <div class="surround border p-5 m-1 rounded shadow">
         <div class="row"> 
           <div class="col">
-            <span class="current-city">New York City</span>
+            <span class="current-city" id="city"></span>
             <div class="current-time">11:24 am</div>
             <div class="current-day">
               Wednesday, <span class="current-date">October 4th, 2023</span><i class="fa-brands fa-canadian-maple-leaf fa-spin" style="color: #fa8b03;"></i>
@@ -40,16 +40,16 @@
             </div>
             <div class="current-temperature">
               <i class="fa-solid fa-sun fa-beat sunny-emoji"></i>
-              <span class="temp">22 </span
+              <span class="temp" id="temperature"></span
               ><span class="degrees">℃ |<a href>℉</a></span>
             </div>
-            <span class="current-weather">CLEAR SKIES</span>
+            <span class="current-weather" id="description"></span>
           </div>
           <div class="col current-conditions">
             <ul>
               <li><span class="precipitation">Precipitation:___%</span> <i class="fa-solid fa-droplet fa-bounce" style="color: #99b9f0;"></i></li>
-              <li><span class="humidity">Humidity:___%</span> <i class="fa-solid fa-hand-holding-droplet" style="color: #bed3f9;"></i></li>
-              <li><span class="wind">Wind: ___km/h</span> <i class="fa-solid fa-wind fa-fade" style="color: #b6d0fb;"></i></li>
+              <li><span class="humidity">Humidity: <span id="humidity"></span>%</span> <i class="fa-solid fa-hand-holding-droplet" style="color: #bed3f9;"></i></li>
+              <li><span class="wind">Wind: <span id=wind></span> km/h</span> <i class="fa-solid fa-wind fa-fade" style="color: #b6d0fb;"></i></li>
             </ul>
           </div>
         </div>
