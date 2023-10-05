@@ -1,7 +1,17 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(226, 240, 254) 0%,
+    rgb(255, 247, 228) 90%
+  );
+}
+.border {
+  background-color: #ffff;
+}
 .title {
   text-align: center;
   color: grey;
-  margin: 20px;
+  margin: 5px;
 }
 .wrapper {
   max-width: 900px;
@@ -28,12 +38,12 @@
 }
 .sunny-emoji {
   font-size: 64px;
-  color: yellow;
+  color: rgba(255, 196, 0, 0.968);
 }
 
 .temp {
   font-size: 64px;
-  color: grey;
+  color: y;
 }
 .degrees {
   font-size: 18px;
@@ -87,4 +97,18 @@ li {
   transition: all 120ms ease-in-out;
   cursor: pointer;
   transform: scale(1.07);
+}
+.rain-cloud {
+  color: #99b9f0;
+}
+.cloudy {
+  color: #99b9f0;
+}
+.mostly-cloudy {
+  color: #99b9f0;
+}
+.open-source-link {
+  margin: 10px;
+  text-align: center;
+  font-size: 18px;
 }
