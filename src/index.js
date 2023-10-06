@@ -37,7 +37,6 @@ function formatDate(timestamp) {
   let dayOfMonth = date.getDate();
   let year = date.getFullYear();
   return `${time}   ${dayOfWeek}, ${month} ${dayOfMonth}th, ${year}`;
-  console.log(response.data.time);
 }
 
 function displayTemperature(response) {
@@ -60,8 +59,17 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 }
+function search(city) {
+  let apiKey = "23ftbd4aecd5fa6f4304ea2800dofdbf";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-let apiKey = "23ftbd4aecd5fa6f4304ea2800dofdbf";
-let city = "Cancun";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+search("New York");
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
