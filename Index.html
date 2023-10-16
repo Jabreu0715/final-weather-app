@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +16,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    
+
     <script
       src="https://kit.fontawesome.com/b0632a11ea.js"
       crossorigin="anonymous"
@@ -29,106 +29,86 @@
     <div class="container">
       <h1 class="title">Weather App</h1>
       <div class="wrapper">
-      <div class="surround border p-5 m-1 rounded shadow">
-        <form id="search-form" class="mb-3">    
-        <div class="row">
-          <div class="col-9">
-            <input type="search" placeholder="Enter a City" class="form-control" id="city-input" autocomplete="off"/>
-          </div>
-          <div class="col-3"><input type="submit" value="Search" class="btn btn-secondary w-100"/></div>
-        </div>
-      </form>
-        <div class="row"> 
-          <div class="col">
-            <span class="current-city" id="city"></span>
-            <div class="current-time" id="time">Last updated...</div>
-            <div class="current-day" id=day>
-            <span class="current-date" id="date"></span><i class="fa-brands fa-canadian-maple-leaf fa-spin" style="color: #fa8b03;"></i>
-
+        <div class="surround border p-5 m-1 rounded shadow">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a City"
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-secondary w-100"
+                />
+              </div>
             </div>
-            <div class="current-temperature">
-              <img src="" id="current-icon">
-              <span class="temp" id="temperature"></span
-              ><span class="degrees">℃ |<a href id="fahrenheit-link">℉</a></span>
+          </form>
+          <div class="row">
+            <div class="col">
+              <span class="current-city" id="city"></span>
+              <div class="current-time" id="time">Last updated...</div>
+              <div class="current-day" id="day">
+                <span class="current-date" id="date"></span
+                ><i
+                  class="fa-brands fa-canadian-maple-leaf fa-spin"
+                  style="color: #fa8b03"
+                ></i>
+              </div>
+              <div class="current-temperature">
+                <img src="" id="current-icon" />
+                <span class="temp" id="temperature"></span
+                ><span class="degrees"
+                  >℃ |<a href id="fahrenheit-link">℉</a></span
+                >
+              </div>
+              <span class="current-weather" id="description"></span>
             </div>
-            <span class="current-weather" id="description"></span>
-          </div>
-          <div class="col current-conditions">
-            <ul>
-              <li><span class="precipitation">Precipitation:___%</span> <i class="fa-solid fa-droplet fa-bounce" style="color: #99b9f0;"></i></li>
-              <li><span class="humidity">Humidity: <span id="humidity"></span>%</span> <i class="fa-solid fa-hand-holding-droplet" style="color: #bed3f9;"></i></li>
-              <li><span class="wind">Wind: <span id=wind></span> km/h</span> <i class="fa-solid fa-wind fa-fade" style="color: #b6d0fb;"></i></li>
-            </ul>
-          </div>
-        </div>
-        <div class="forecast-title">FIVE DAY FORECAST</div>
-        <div class="row five-day-forecast">
-<div class="card col-sm-2 m-0 p-0">10/05
-            <div class="card-body">
-              <p class="card-title">Sat</p>
-              <hr/>
-              <p class="card-text">
-                <i class="fa-solid fa-cloud-rain fa-beat-fade rain-cloud"></i>
-                <div class="high-temp">63°F</div>
-                <hr/>
-                <span class="low-temp">55°F</span></p>
-            </div>
-          </div>         
-          
-          <div class="card col-sm-2 m-0 p-0">10/06
-            <div class="card-body">
-              <p class="card-title">Sun</p>
-              <hr/>
-              <p class="card-text">
-                <i class="fa-solid fa-cloud cloudy"></i>
-              
-                <div class="high-temp">65°F</div>
-                <hr/>
-                <span class="low-temp">53°F</span>
-              </p>
-            </div>
-          </div>
-              <div class="card col-sm-2 m-0 p-0">10/07
-            <div class="card-body">
-              <p class="card-title">Mon</p>
-              <hr/>
-              <p class="card-text">
-                <i class="fa-solid fa-cloud-rain fa-beat-fade rain-cloud"></i>
-                <div class="high-temp">64°F</div>
-                <hr/>
-                <span class="low-temp">48°F</span>
-              </p>
+            <div class="col current-conditions">
+              <ul>
+                <li>
+                  <span class="precipitation">Precipitation:___%</span>
+                  <i
+                    class="fa-solid fa-droplet fa-bounce"
+                    style="color: #99b9f0"
+                  ></i>
+                </li>
+                <li>
+                  <span class="humidity"
+                    >Humidity: <span id="humidity"></span>%</span
+                  >
+                  <i
+                    class="fa-solid fa-hand-holding-droplet"
+                    style="color: #bed3f9"
+                  ></i>
+                </li>
+                <li>
+                  <span class="wind">Wind: <span id="wind"></span> km/h</span>
+                  <i
+                    class="fa-solid fa-wind fa-fade"
+                    style="color: #b6d0fb"
+                  ></i>
+                </li>
+              </ul>
             </div>
           </div>
-            <div class="card col-sm-2 m-0 p-0">10/08
-            <div class="card-body">
-              <p class="card-title">Tues</p>
-              <hr/>
-              <p class="card-text">
-                <i class="fa-solid fa-cloud-sun mostly-cloudy"></i>
-                <div class="high-temp">59°F</div>
-                <hr/>
-                <span class="low-temp">45°F</span>
-              </p>
-            </div>
-          </div>
-                 <div class="card col-sm-2 m-0 p-0">10/09
-            <div class="card-body">
-              <p class="card-title">Wed</p>
-              <hr/>
-              <p class="card-text">
-                <i class="fa-solid fa-cloud-sun mostly-cloudy"></i>
-                <div class="high-temp">61°F</div>
-                <hr/>
-                <span class="low-temp">47°F</span>             
-                </p>
-            </div>
-            </div>
-            </div>
         </div>
       </div>
       <div class="open-source-link">
-      Open source code at <a href="https://github.com/Jabreu0715/final-weather-app/tree/main">GitHub</a> hosted by <a href="https://clever-sunburst-e44dd2.netlify.app/">Netlify</a> Coded by Jennifer Abreu</div>
+        Open source code at
+        <a href="https://github.com/Jabreu0715/final-weather-app/tree/main"
+          >GitHub</a
+        >
+        hosted by
+        <a href="https://clever-sunburst-e44dd2.netlify.app/">Netlify</a> Coded
+        by Jennifer Abreu
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
