@@ -113,6 +113,12 @@ li {
 .mostly-cloudy {
   color: #99b9f0;
 }
+.forecast-high-temp {
+  color: black;
+}
+.forecast-low-temp {
+  color: grey;
+}
 
 .open-source-link {
   margin: 10px;
