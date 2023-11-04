@@ -36,7 +36,7 @@ body {
 }
 .current-date {
   font-size: 18px;
-  color: rgb(250, 139, 3);
+  font-weight: 600;
 }
 .sunny-emoji {
   font-size: 64px;
@@ -96,7 +96,7 @@ li {
   margin: 0 auto;
   height: 300px;
   font-size: 18px;
-  border: solid rgb(250, 139, 3);
+  border: solid gray;
   border-width: 2px;
 }
 .col-sm-2:hover {
@@ -115,11 +115,18 @@ li {
 }
 .forecast-high-temp {
   color: black;
+  text-align: center;
 }
 .forecast-low-temp {
   color: grey;
+  text-align: center;
 }
-
+.forecast-icon {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
+}
 .open-source-link {
   margin: 10px;
   text-align: center;
