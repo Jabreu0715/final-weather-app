@@ -20,7 +20,7 @@ function displayTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  getForecast(response.data.city);
+  getForecast(response.data.coordinates);
 }
 
 function formatDate(timestamp) {
@@ -63,7 +63,7 @@ function formatDate(timestamp) {
   let year = date.getFullYear();
   return `${time}   ${dayOfWeek}, ${month} ${dayOfMonth}th, ${year}`;
 }
-
+formatDate();
 function search(city) {
   let apiKey = "23ftbd4aecd5fa6f4304ea2800dofdbf";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -98,15 +98,16 @@ function formatDay(timestamp) {
   return days[date.getDay()];
 }
 
-function getForecast(city) {
+function getForecast(coordinates) {
   let apiKey = "23ftbd4aecd5fa6f4304ea2800dofdbf";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}`;
+  console.log(apiUrl);
   axios(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
   console.log(response.data);
-
+  let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -121,11 +122,11 @@ function displayForecast(response) {
       <p class="card-text">
         <img src="${day.condition.icon_url}" id="forecast-icon" />
         <div class="forecast-high-temp">${Math.round(
-          day.tempurature.maximum
+          day.temperature.maximum
         )}°</div>
         <hr />
         <span class="forecast-low-temp">${Math.round(
-          day.tempurature.minimum
+          day.temperature.minimum
         )}°</span>
       </p>
     </div>
@@ -133,9 +134,9 @@ function displayForecast(response) {
 `;
     }
   });
-  let forecastElement = document.querySelector("#forecast");
+
   forecastElement.innerHTML = forecastHTML;
 }
 
-search(NewYork);
+search("New York");
 getForecast();
