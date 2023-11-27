@@ -20,6 +20,7 @@ function displayTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+  console.log(response.data.coordinates);
   getForecast(response.data.coordinates);
 }
 
@@ -61,7 +62,7 @@ function formatDate(timestamp) {
   let month = months[date.getMonth()];
   let dayOfMonth = date.getDate();
   let year = date.getFullYear();
-  return `${time}   ${dayOfWeek}, ${month} ${dayOfMonth}th, ${year}`;
+  return `${time}   ${dayOfWeek}, ${month} ${dayOfMonth}, ${year}`;
 }
 formatDate();
 function search(city) {
@@ -107,10 +108,10 @@ function getForecast(coordinates) {
 
 function displayForecast(response) {
   console.log(response.data);
-  let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
 
   response.data.daily.forEach(function (day, index) {
+    console.log(day);
     if (index < 5) {
       forecastHTML =
         forecastHTML +
@@ -134,6 +135,7 @@ function displayForecast(response) {
 `;
     }
   });
+  let forecastElement = document.querySelector("#forecast");
 
   forecastElement.innerHTML = forecastHTML;
 }
